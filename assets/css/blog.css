@@ -1,0 +1,33 @@
+/*
+ * Blog single-post content framing.
+ * Blog posts render their body via Elementor's theme-post-content widget, whose
+ * root container is full-width with zero side padding — unlike normal pages,
+ * whose sections are boxed (1400px) with the global responsive padding.
+ * This reproduces that page framing for the article body so the content has the
+ * same max-width and side spacing as the rest of the site.
+ */
+.single-post .elementor-widget-theme-post-content > .elementor-widget-container {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+@media (max-width: 1024px) {
+  .single-post .elementor-widget-theme-post-content > .elementor-widget-container {
+    padding-left: 3.8rem;
+    padding-right: 3.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .single-post .elementor-widget-theme-post-content > .elementor-widget-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .single-post .elementor-widget-theme-post-content > .elementor-widget-container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
