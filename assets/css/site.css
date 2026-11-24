@@ -1,0 +1,15 @@
+html{scroll-behavior:smooth}
+body{margin:0;background:#FAF8F5}
+a{color:#7A00CC}a:hover{color:#56008F}
+.variant-menu{display:none}
+@media (max-width:900px){.variant-boog{display:none}.variant-menu{display:block}}
+@media (max-width:760px){.nav-link{display:none}}
+details.faq summary{list-style:none}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq .faq-min{display:none}
+details.faq[open] .faq-min{display:inline}
+details.faq[open] .faq-plus{display:none}
+.form-ok{display:none;background:#F2EBFB;border-radius:12px;padding:16px 18px;font-size:15px;line-height:1.5;color:#1A1033}
+form.sent .form-ok{display:block}
+form.sent .form-fields{display:none}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
