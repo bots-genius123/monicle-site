@@ -1,7 +1,10 @@
 # Oude Elementor-URL's (tot nov 2026) -> nieuwe pagina's. Dienst-, werkwijze- en over-ons-pagina's
 # volgen nog; zodra die er zijn, de doelen hieronder bijwerken.
 RedirectMatch 301 ^/(en/)?contact-2/?$ /contact/
-RedirectMatch 301 ^/(en/)?(about-us-2|seo-service-detail-page|way-of-working|client-portfolio|why-seo|seo-audit)(/.*)?$ /
+RedirectMatch 301 ^/(en/)?way-of-working/?$ /werkwijze/
+RedirectMatch 301 ^/(en/)?seo-audit/?$ /gratis-groeianalyse/
+# oude GEO-pagina: naar /diensten/geo-ai-vindbaarheid/ zodra die live staat
+RedirectMatch 301 ^/(en/)?(about-us-2|seo-service-detail-page|client-portfolio|why-seo)(/.*)?$ /
 RedirectMatch 301 ^/(en/)?blog(/.*)?$ /
 RedirectMatch 301 ^/en(/.*)?$ /
 

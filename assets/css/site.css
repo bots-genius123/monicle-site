@@ -1,15 +1,40 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:#FAF8F5}
 a{color:#7A00CC}a:hover{color:#56008F}
-.variant-menu{display:none}
-@media (max-width:900px){.variant-boog{display:none}.variant-menu{display:block}}
-@media (max-width:760px){.nav-link{display:none}}
+/* header */
+.site-nav{max-width:1160px;margin:0 auto;padding:18px 24px;display:flex;flex-wrap:wrap;align-items:center;gap:20px}
+.nav-logo{display:inline-flex;align-items:center}.nav-logo img{height:30px;width:auto;display:block}
+.nav-links{display:flex;flex-wrap:wrap;gap:22px;margin-left:auto;align-items:center}
+.nav-cta{background:#9900FF;color:#FFFFFF!important;text-decoration:none;font-size:15px;font-weight:600;padding:12px 22px;border-radius:999px;display:inline-block}
+.nav-cta:hover{background:#7A00CC}
+.nav-toggle{display:none;background:none;border:0;padding:8px;cursor:pointer;line-height:0}
+@media (max-width:900px){
+  .site-nav{gap:12px;padding:14px 20px}
+  .nav-logo img{height:24px}
+  .nav-cta{margin-left:auto;font-size:13px;padding:9px 14px}
+  .nav-toggle{display:inline-flex}
+  .nav-links{order:3;width:100%;margin-left:0;flex-direction:column;align-items:flex-start;gap:14px;padding:6px 0 4px}
+  .js .nav-links{display:none}
+  .js .site-header.open .nav-links{display:flex}
+}
+/* FAQ-accordeon */
 details.faq summary{list-style:none}
 details.faq summary::-webkit-details-marker{display:none}
 details.faq .faq-min{display:none}
 details.faq[open] .faq-min{display:inline}
 details.faq[open] .faq-plus{display:none}
+/* formulieren */
 .form-ok{display:none;background:#F2EBFB;border-radius:12px;padding:16px 18px;font-size:15px;line-height:1.5;color:#1A1033}
 form.sent .form-ok{display:block}
 form.sent .form-fields{display:none}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+/* animaties: alleen actief als site.js de klasse zet; zonder JS of bij reduced motion is de eindstaat zichtbaar */
+.a-hide{opacity:0;transform:translateY(8px)}
+.a-show{opacity:1;transform:none;transition:opacity .5s ease-out,transform .5s ease-out}
+@property --ring{syntax:'<percentage>';inherits:false;initial-value:100%}
+.a-ring{-webkit-mask:conic-gradient(#000 var(--ring),transparent 0);mask:conic-gradient(#000 var(--ring),transparent 0)}
+.a-ring.a-start{--ring:0%}
+.a-ring.a-go{--ring:100%;transition:--ring 1.2s ease-out}
+.a-bar-x{transform:scaleX(0);transform-origin:left center}
+.a-bar-y{transform:scaleY(0);transform-origin:center bottom}
+.a-bar-go{transform:none;transition:transform .9s ease-out}
